@@ -18,10 +18,12 @@
 
 Приложение разработано по TDD-методологии. 
 
-[UI-тесты](https://github.com/AlexeyQQQ/ItunesSearchMusicApp/blob/master/app/src/androidTest/java/ru/easycode/intensive2itunessearch/ui/ScenarioTest.kt) покрывают все основные кейсы использования приложения: поиск треков, воспроизведение, остановка музыки. Манипуляции с треками и плейлистами - добавление, удаление, редактирование и т.д. Подробное описание каждого UI тест-кейса доступно в файле. 
+[UI-тесты](https://github.com/AlexeyQQQ/ItunesSearchMusicApp/blob/master/app/src/androidTest/java/ru/easycode/intensive2itunessearch/ui/ScenarioTest.kt) покрывают все основные кейсы использования приложения: поиск треков, воспроизведение, остановка музыки. Манипуляции с треками и плейлистами: добавление, удаление, редактирование и т.д. Подробное описание каждого UI тест-кейса доступно в файле. 
 Также unit тест-кейсами прокрыты room, вьюмодели и репозитории.
 
 Работа с медиа ведется с помощью библиотеки Jetpack Media3 для обеспечения фонового воспроизведения. Используемые компоненты: ExoPlayer, MediaController, MediaSessionService.
+
+В проекте множество custom решений: Dependency Injection, Lifecycle-aware observers, Navigation.
 
 Приложение использует [iTunes Search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
 ________
