@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch
+package ru.easycode.intensive2itunessearch.core
 
 import kotlinx.coroutines.runBlocking
 import okhttp3.Request

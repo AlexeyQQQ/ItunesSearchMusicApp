@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch.delete_playlist
+package ru.easycode.intensive2itunessearch.edit_playlist
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.runBlocking
@@ -8,10 +8,10 @@ import org.junit.Test
 import ru.easycode.intensive2itunessearch.add.presentation.PlaylistUi
 import ru.easycode.intensive2itunessearch.core.presentation.RunAsync
 import ru.easycode.intensive2itunessearch.core.presentation.UpdateUi
-import ru.easycode.intensive2itunessearch.delete_playlist.data.EditPlaylistRepository
-import ru.easycode.intensive2itunessearch.delete_playlist.presentation.EditPlaylistUiObservable
-import ru.easycode.intensive2itunessearch.delete_playlist.presentation.EditPlaylistUiState
-import ru.easycode.intensive2itunessearch.delete_playlist.presentation.EditPlaylistViewModel
+import ru.easycode.intensive2itunessearch.edit_playlist.data.EditPlaylistRepository
+import ru.easycode.intensive2itunessearch.edit_playlist.presentation.EditPlaylistUiObservable
+import ru.easycode.intensive2itunessearch.edit_playlist.presentation.EditPlaylistUiState
+import ru.easycode.intensive2itunessearch.edit_playlist.presentation.EditPlaylistViewModel
 
 class EditPlaylistViewModelTest {
 

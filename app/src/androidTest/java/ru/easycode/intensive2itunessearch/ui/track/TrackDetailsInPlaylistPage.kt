@@ -2,8 +2,8 @@ package ru.easycode.intensive2itunessearch.ui.track
 
 import androidx.test.espresso.matcher.ViewMatchers
 import ru.easycode.intensive2itunessearch.R
-import ru.easycode.intensive2itunessearch.ui.AbstractPage
-import ru.easycode.intensive2itunessearch.ui.ButtonUi
+import ru.easycode.intensive2itunessearch.ui.core.AbstractPage
+import ru.easycode.intensive2itunessearch.ui.core.ButtonUi
 
 class TrackDetailsInPlaylistPage :
     AbstractPage(ViewMatchers.withParent(ViewMatchers.withId(R.id.trackActionsLayout))) {

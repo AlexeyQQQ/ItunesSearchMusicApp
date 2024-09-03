@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import ru.easycode.intensive2itunessearch.add.di.ProvideAddTrackToPlaylistViewModel
 import ru.easycode.intensive2itunessearch.create_playlist.di.ProvideCreatePlaylistsViewModel
 import ru.easycode.intensive2itunessearch.dashboard.di.ProvideDashboardViewModel
-import ru.easycode.intensive2itunessearch.delete_playlist.di.ProvideDeletePlaylistsViewModel
+import ru.easycode.intensive2itunessearch.edit_playlist.di.ProvideDeletePlaylistsViewModel
 import ru.easycode.intensive2itunessearch.main.di.ProvideMainViewModel
 import ru.easycode.intensive2itunessearch.playlist_details.di.ProvidePlaylistDetailsViewModel
 import ru.easycode.intensive2itunessearch.playlists.di.ProvidePlaylistsViewModel

@@ -17,7 +17,7 @@ import ru.easycode.intensive2itunessearch.main.presentation.MainObservable
 
 class Core(context: Context) {
 
-    val runUiTest: Boolean = BuildConfig.DEBUG
+    val runUiTest: Boolean = !BuildConfig.DEBUG
 
     val runAsync: RunAsync = RunAsync.Base()
 

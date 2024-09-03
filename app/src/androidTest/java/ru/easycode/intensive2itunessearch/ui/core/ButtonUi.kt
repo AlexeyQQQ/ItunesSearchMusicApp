@@ -1,27 +1,27 @@
-package ru.easycode.intensive2itunessearch.ui
+package ru.easycode.intensive2itunessearch.ui.core
 
 import android.view.View
-import android.widget.TextView
+import android.widget.Button
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.ViewInteraction
-import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.allOf
 
-class TextViewUi(
+class ButtonUi(
     rootId: Matcher<View>,
     rootClass: Matcher<View>,
     resId: Int,
+    text: String,
 ) : AbstractViewUi(
     onView(
         allOf(
             withId(resId),
-            isAssignableFrom(TextView::class.java),
+            withText(text),
+            isAssignableFrom(Button::class.java),
             rootId,
-            rootClass
+            rootClass,
         )
     )
 )

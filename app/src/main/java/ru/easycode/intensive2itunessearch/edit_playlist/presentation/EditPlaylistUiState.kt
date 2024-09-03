@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch.delete_playlist.presentation
+package ru.easycode.intensive2itunessearch.edit_playlist.presentation
 
 import ru.easycode.intensive2itunessearch.core.presentation.views.UpdateButton
 

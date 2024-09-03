@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch.delete_playlist.data
+package ru.easycode.intensive2itunessearch.edit_playlist.data
 
 import ru.easycode.intensive2itunessearch.core.data.cache.PlaylistDao
 import ru.easycode.intensive2itunessearch.core.data.cache.RelationDao

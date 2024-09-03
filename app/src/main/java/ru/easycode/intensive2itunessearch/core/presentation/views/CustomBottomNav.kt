@@ -15,17 +15,14 @@ class CustomBottomNav : BottomNavigationView, UpdateBottomNav {
         defStyleAttrs
     )
 
-    private var savedVisibility: Int = this.visibility
-
     override fun changeVisibility(visibility: Int) {
-        this.savedVisibility = visibility
         this.visibility = visibility
     }
 
     override fun onSaveInstanceState(): Parcelable {
         super.onSaveInstanceState().let {
             val savedState = CustomBottomNavSavedState(it)
-            savedState.save(savedVisibility)
+            savedState.save(this.visibility)
             return savedState
         }
     }

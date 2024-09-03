@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch.ui
+package ru.easycode.intensive2itunessearch.ui.core
 
 import android.view.View
 import android.widget.ImageButton

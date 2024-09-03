@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch.playlist.data
+package ru.easycode.intensive2itunessearch.create_playlist
 
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.runBlocking

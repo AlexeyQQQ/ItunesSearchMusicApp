@@ -11,7 +11,7 @@ import ru.easycode.intensive2itunessearch.core.di.ManageViewModels
 import ru.easycode.intensive2itunessearch.core.presentation.AbstractFragment
 import ru.easycode.intensive2itunessearch.create_playlist.presentation.CreatePlaylistDialogFragment
 import ru.easycode.intensive2itunessearch.databinding.FragmentPlaylistsBinding
-import ru.easycode.intensive2itunessearch.delete_playlist.presentation.EditPlaylistDialogFragment
+import ru.easycode.intensive2itunessearch.edit_playlist.presentation.EditPlaylistDialogFragment
 
 class PlaylistsFragment : AbstractFragment<
         PlaylistsUiState,

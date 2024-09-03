@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch.playlist
+package ru.easycode.intensive2itunessearch.create_playlist
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.runBlocking

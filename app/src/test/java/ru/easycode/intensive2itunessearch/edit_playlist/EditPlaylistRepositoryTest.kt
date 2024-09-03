@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch.delete_playlist
+package ru.easycode.intensive2itunessearch.edit_playlist
 
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
@@ -8,7 +8,7 @@ import ru.easycode.intensive2itunessearch.core.data.cache.PlaylistDao
 import ru.easycode.intensive2itunessearch.core.data.cache.RelationCache
 import ru.easycode.intensive2itunessearch.core.data.cache.RelationDao
 import ru.easycode.intensive2itunessearch.core.data.cache.TrackCache
-import ru.easycode.intensive2itunessearch.delete_playlist.data.EditPlaylistRepository
+import ru.easycode.intensive2itunessearch.edit_playlist.data.EditPlaylistRepository
 
 class EditPlaylistRepositoryTest {
 

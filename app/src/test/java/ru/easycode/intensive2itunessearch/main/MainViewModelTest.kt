@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch
+package ru.easycode.intensive2itunessearch.main
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.runBlocking

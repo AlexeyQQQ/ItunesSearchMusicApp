@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch.ui
+package ru.easycode.intensive2itunessearch.ui.core
 
 import androidx.test.espresso.ViewInteraction
 import androidx.test.espresso.action.ViewActions

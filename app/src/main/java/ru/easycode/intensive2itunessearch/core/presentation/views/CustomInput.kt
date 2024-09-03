@@ -15,10 +15,7 @@ class CustomInput : TextInputEditText, UpdateInput {
         defStyleAttrs
     )
 
-    private var savedVisibility: Int = this.visibility
-
     override fun changeVisibility(visibility: Int) {
-        this.savedVisibility = visibility
         this.visibility = visibility
     }
 
@@ -29,7 +26,7 @@ class CustomInput : TextInputEditText, UpdateInput {
     override fun onSaveInstanceState(): Parcelable? {
         return super.onSaveInstanceState()?.let {
             val savedState = CustomInputSavedState(it)
-            savedState.save(savedVisibility)
+            savedState.save(this.visibility)
             return savedState
         }
     }

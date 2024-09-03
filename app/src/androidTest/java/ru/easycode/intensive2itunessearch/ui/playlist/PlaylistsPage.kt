@@ -7,8 +7,8 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withParent
 import org.hamcrest.Matcher
 import ru.easycode.intensive2itunessearch.R
-import ru.easycode.intensive2itunessearch.ui.ImageButtonUi
-import ru.easycode.intensive2itunessearch.ui.TextViewUi
+import ru.easycode.intensive2itunessearch.ui.core.ImageButtonUi
+import ru.easycode.intensive2itunessearch.ui.core.TextViewUi
 
 class PlaylistsPage {
 

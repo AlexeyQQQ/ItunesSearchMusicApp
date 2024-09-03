@@ -7,9 +7,9 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withParent
 import org.hamcrest.Matcher
 import ru.easycode.intensive2itunessearch.R
-import ru.easycode.intensive2itunessearch.ui.ButtonUi
-import ru.easycode.intensive2itunessearch.ui.InputUi
-import ru.easycode.intensive2itunessearch.ui.TextViewUi
+import ru.easycode.intensive2itunessearch.ui.core.ButtonUi
+import ru.easycode.intensive2itunessearch.ui.core.InputUi
+import ru.easycode.intensive2itunessearch.ui.core.TextViewUi
 
 class EditPlaylistPage {
     private val rootId: Matcher<View> =

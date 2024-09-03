@@ -15,24 +15,19 @@ class CustomButton : MaterialButton, UpdateButton {
         defStyleAttrs
     )
 
-    private var savedVisibility: Int = this.visibility
-    private var savedEnabled: Boolean = this.isEnabled
-
     override fun changeVisibility(visibility: Int) {
-        this.savedVisibility = visibility
         this.visibility = visibility
     }
 
     override fun changeEnabled(enabled: Boolean) {
-        this.savedEnabled = enabled
         this.isEnabled = enabled
     }
 
     override fun onSaveInstanceState(): Parcelable {
         super.onSaveInstanceState().let {
             val savedState = CustomButtonSavedState(it)
-            savedState.saveVisibility(savedVisibility)
-            savedState.saveEnabled(savedEnabled)
+            savedState.saveVisibility(this.visibility)
+            savedState.saveEnabled(this.isEnabled)
             return savedState
         }
     }

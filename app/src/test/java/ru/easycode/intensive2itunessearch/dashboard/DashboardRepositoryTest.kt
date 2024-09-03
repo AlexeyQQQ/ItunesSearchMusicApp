@@ -1,4 +1,4 @@
-package ru.easycode.intensive2itunessearch.dashboard.data
+package ru.easycode.intensive2itunessearch.dashboard
 
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
@@ -7,6 +7,9 @@ import ru.easycode.intensive2itunessearch.core.data.cache.CurrentPlaylistCache
 import ru.easycode.intensive2itunessearch.core.data.cache.CurrentTrackIdCache
 import ru.easycode.intensive2itunessearch.core.data.cache.StringCache
 import ru.easycode.intensive2itunessearch.core.data.cache.TrackCache
+import ru.easycode.intensive2itunessearch.dashboard.data.DashboardRepository
+import ru.easycode.intensive2itunessearch.dashboard.data.LoadResult
+import ru.easycode.intensive2itunessearch.dashboard.data.Track
 import ru.easycode.intensive2itunessearch.dashboard.data.cache.CacheDashboardDataSource
 import ru.easycode.intensive2itunessearch.dashboard.data.cloud.CloudDataSource
 import ru.easycode.intensive2itunessearch.dashboard.data.cloud.TrackCloud

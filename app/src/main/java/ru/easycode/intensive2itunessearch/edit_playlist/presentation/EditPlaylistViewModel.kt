@@ -1,9 +1,9 @@
-package ru.easycode.intensive2itunessearch.delete_playlist.presentation
+package ru.easycode.intensive2itunessearch.edit_playlist.presentation
 
 import ru.easycode.intensive2itunessearch.add.presentation.PlaylistUi
 import ru.easycode.intensive2itunessearch.core.presentation.AbstractViewModel
 import ru.easycode.intensive2itunessearch.core.presentation.RunAsync
-import ru.easycode.intensive2itunessearch.delete_playlist.data.EditPlaylistRepository
+import ru.easycode.intensive2itunessearch.edit_playlist.data.EditPlaylistRepository
 
 
 class EditPlaylistViewModel(
