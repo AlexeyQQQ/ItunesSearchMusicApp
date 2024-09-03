@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ru.easycode.intensive2itunessearch.core.presentation.views.CustomMotionLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layoutDescription="@xml/activity_main_scene"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/container"
+        tools:visibility="visible">
+
+        <View
+            android:id="@+id/backgroundView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ru.easycode.intensive2itunessearch.core.presentation.views.CustomTextView
+            android:id="@+id/trackNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:gravity="start"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toTopOf="@id/artistNameTextView"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintStart_toStartOf="@id/backgroundView"
+            app:layout_constraintTop_toTopOf="@id/backgroundView"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Very_long_track_title" />
+
+        <ru.easycode.intensive2itunessearch.core.presentation.views.CustomTextView
+            android:id="@+id/artistNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:gravity="start"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@id/coverImageView"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintStart_toStartOf="@id/backgroundView"
+            app:layout_constraintTop_toBottomOf="@id/trackNameTextView"
+            tools:text="Very_long_artist_name" />
+
+        <ru.easycode.intensive2itunessearch.core.presentation.views.CustomImageView
+            android:id="@+id/coverImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/cover_image"
+            android:gravity="start"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintStart_toStartOf="@id/backgroundView"
+            app:layout_constraintTop_toTopOf="@id/backgroundView"
+            tools:srcCompat="@drawable/ic_launcher_background" />
+
+        <ru.easycode.intensive2itunessearch.core.presentation.views.CustomImageButton
+            android:id="@+id/previousImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:contentDescription="@string/previous_image_button"
+            app:layout_constraintBottom_toBottomOf="@id/playImageButton"
+            app:layout_constraintEnd_toStartOf="@id/playImageButton"
+            app:layout_constraintStart_toStartOf="@id/backgroundView"
+            app:srcCompat="@drawable/ic_previous_track" />
+
+        <ru.easycode.intensive2itunessearch.core.presentation.views.CustomImageButton
+            android:id="@+id/playImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:contentDescription="@string/play_image_button"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+            app:layout_constraintEnd_toStartOf="@id/nextImageButton"
+            app:layout_constraintStart_toEndOf="@id/previousImageButton"
+            app:layout_constraintTop_toBottomOf="@id/coverImageView"
+            tools:srcCompat="@drawable/ic_play_track" />
+
+        <ru.easycode.intensive2itunessearch.core.presentation.views.CustomImageButton
+            android:id="@+id/nextImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:contentDescription="@string/next_button"
+            app:layout_constraintBottom_toBottomOf="@id/playImageButton"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintStart_toEndOf="@id/playImageButton"
+            app:srcCompat="@drawable/ic_next_track" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/white"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backgroundView" />
+
+    </ru.easycode.intensive2itunessearch.core.presentation.views.CustomMotionLayout>
+
+    <ru.easycode.intensive2itunessearch.core.presentation.views.CustomBottomNav
+        android:id="@+id/bottomNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

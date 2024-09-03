@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ConstraintSet android:id="@+id/min">
+        <Constraint
+            android:id="@id/backgroundView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backgroundView" />
+
+        <Constraint
+            android:id="@id/coverImageView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+            app:layout_constraintStart_toStartOf="@id/backgroundView"
+            app:layout_constraintTop_toTopOf="@id/backgroundView"
+            tools:srcCompat="@drawable/ic_launcher_background" />
+
+        <Constraint
+            android:id="@id/playImageButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintTop_toTopOf="@id/backgroundView" />
+
+        <Constraint
+            android:id="@id/previousImageButton"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintTop_toTopOf="@id/backgroundView" />
+
+        <Constraint
+            android:id="@id/nextImageButton"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintTop_toTopOf="@id/backgroundView" />
+
+        <Constraint
+            android:id="@id/trackNameTextView"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@id/artistNameTextView"
+            app:layout_constraintEnd_toStartOf="@id/playImageButton"
+            app:layout_constraintStart_toEndOf="@id/coverImageView"
+            app:layout_constraintTop_toTopOf="@id/backgroundView" />
+
+        <Constraint
+            android:id="@id/artistNameTextView"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+            app:layout_constraintEnd_toStartOf="@id/playImageButton"
+            app:layout_constraintStart_toEndOf="@id/coverImageView"
+            app:layout_constraintTop_toBottomOf="@id/trackNameTextView" />
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/max">
+        <Constraint
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backgroundView" />
+
+        <Constraint
+            android:id="@+id/trackNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/artistNameTextView"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintStart_toStartOf="@id/backgroundView"
+            app:layout_constraintTop_toTopOf="@id/backgroundView"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Constraint
+            android:id="@+id/artistNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/coverImageView"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintStart_toStartOf="@id/backgroundView"
+            app:layout_constraintTop_toBottomOf="@id/trackNameTextView" />
+
+        <Constraint
+            android:id="@+id/coverImageView"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            app:layout_constraintBottom_toBottomOf="@id/backgroundView"
+            app:layout_constraintEnd_toEndOf="@id/backgroundView"
+            app:layout_constraintStart_toStartOf="@id/backgroundView"
+            app:layout_constraintTop_toTopOf="@id/backgroundView" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@+id/max"
+        app:constraintSetStart="@id/min">
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="90"
+                app:motionTarget="@+id/previousImageButton" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="90"
+                app:motionTarget="@+id/playImageButton" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="90"
+                app:motionTarget="@+id/nextImageButton" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="5"
+                app:motionTarget="@+id/playImageButton" />
+        </KeyFrameSet>
+
+        <OnClick app:targetId="@+id/backgroundView" />
+
+    </Transition>
+</MotionScene>

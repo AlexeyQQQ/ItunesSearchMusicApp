@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Intensive2ItunesSearch</string>
+    <string name="input_text">Input text</string>
+    <string name="cover_image">cover image</string>
+    <string name="play_button">play button</string>
+    <string name="retry">Retry</string>
+    <string name="playlists">Playlists</string>
+    <string name="search">Search</string>
+    <string name="button_back">button back</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_playlist">Save playlist</string>
+    <string name="create_playlist">Create playlist</string>
+    <string name="add_to_playlist">Add to playlist</string>
+    <string name="my_playlists">My Playlists</string>
+    <string name="create_new_playlist">Create new playlist</string>
+    <string name="delete">Delete</string>
+    <string name="playlistName">playlistName\n\n</string>
+    <string name="rename">Rename</string>
+    <string name="previous_image_button">previous button</string>
+    <string name="play_image_button">play button</string>
+    <string name="next_button">next button</string>
+    <string name="angleDownButton">Angle down button</string>
+    <string name="remove_track_from_current_playlist">Remove track from current playlist</string>
+</resources>
